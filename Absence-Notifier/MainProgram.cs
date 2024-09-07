@@ -7,6 +7,7 @@ public static class MainProgram
 
     public static void Start()
     {
+        Console.Clear();
         bool running = true;
         while (running)
         {
@@ -28,6 +29,12 @@ public static class MainProgram
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("Email has not been set. Please enter setup to configure it.");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            if (!File.Exists(emailServerSettings))
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("Email server settings have not been set. Please enter setup to configure it.");
                 Console.ForegroundColor = ConsoleColor.White;
             }
             if (!File.Exists(configFile))
@@ -203,6 +210,9 @@ public static class MainProgram
                 case "back":
                     running = false;
                     break;
+                case "exit":
+                    Environment.Exit(0);
+                    break;
                 default:
                     Console.WriteLine("Command not found. Type 'help' to show the commands list.");
                     break;
@@ -227,6 +237,14 @@ public static class MainProgram
             {
                 case "setup":
                     SetupEmail();
+                    break;
+
+                case "setup-server":
+                    SetupEmailServer();
+                    break;
+                    
+                case "server":
+                    SetupEmailServer();
                     break;
 
                 case "test":
@@ -350,6 +368,7 @@ public static class MainProgram
                 case "help":
                     Console.Clear();
                     Console.WriteLine("setup - Setup your email account.");
+                    Console.WriteLine("setup-server - Setup your email server settings.");
                     Console.WriteLine("test - Test that the program can send emails with your account.");
                     Console.WriteLine("add-contacts - Add email addresses to your contacts list.");
                     Console.WriteLine("subject - Change the subject of the mail sent to your contacts.");
@@ -359,6 +378,9 @@ public static class MainProgram
                     Console.WriteLine("special-message - Change the message of the mail sent to your special contacts.");
                     Console.WriteLine("back - Returns to the previous menu.");
                     Console.WriteLine("help - Shows this help");
+                    break;
+                case "exit":
+                    Environment.Exit(0);
                     break;
                 default:
                     Console.WriteLine("Command not found. Type 'help' to show commands list.");
@@ -421,5 +443,46 @@ public static class MainProgram
         if (!Directory.Exists(emailDir))
             Directory.CreateDirectory(emailDir);
         File.WriteAllText(configFile, reminder + Environment.NewLine + absence);
+    }
+
+    static void SetupEmailServer()
+    {
+        Console.Clear();
+        Console.WriteLine("Enter the option to setup the email server settings.");
+        Console.WriteLine("1. GMAIL Default");
+        Console.WriteLine("2. Custom");
+        Console.Write("Option: ");
+        string option = Console.ReadLine();
+        if(option == "1")
+        {
+            emailServerAddress = "smtp.gmail.com";
+            emailPort = 587;
+            string tmpServer = "address=" + emailServerAddress;
+            string tmpPort = "port=" + emailPort;
+            if (!Directory.Exists(emailDir))
+                Directory.CreateDirectory(emailDir);
+            File.WriteAllText(emailServerSettings, tmpServer + Environment.NewLine + emailPort);
+            Console.WriteLine("Done setting up email server.");
+            Console.ReadKey();
+        }
+        else if(option == "2")
+        {
+            Console.Clear();
+            Console.Write("Enter the email server address (smtpClient): ");
+            string tmpServer = Console.ReadLine();
+            Console.Write("Enter the email port: ");
+            string tmpPort = Console.ReadLine();
+            
+            string tmpServerSave = "address=" + tmpServer;
+            string tmpPortSave = "port=" + tmpPort;
+            emailServerAddress = tmpServer;
+            emailPort = int.Parse(tmpPort);
+            if (!Directory.Exists(emailDir))
+                Directory.CreateDirectory(emailDir);
+            File.WriteAllText(emailServerSettings, tmpServerSave + Environment.NewLine + tmpPortSave);
+            Console.WriteLine("Done setting up email server.");
+            Console.ReadKey();
+        }
+        Console.Clear();
     }
 }

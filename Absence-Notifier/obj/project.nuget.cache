@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "zFqs1IepTpN5Z2PpMzlrW52tEBjTP85jbOZM7XWmwWSd06DuPRSBlvOa2EQEeB7UXNBxW6SP/cXdSSu7lmzHgg==",
+  "success": true,
+  "projectFilePath": "D:\\ManuEcheveste\\Projects\\Absence-Notifier\\Absence-Notifier\\Absence-Notifier.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ManuEcheveste\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.0\\microsoft.net.illink.tasks.8.0.0.nupkg.sha512",
+    "C:\\Users\\ManuEcheveste\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\8.0.0\\microsoft.netcore.app.runtime.linux-x64.8.0.0.nupkg.sha512",
+    "C:\\Users\\ManuEcheveste\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\8.0.0\\microsoft.aspnetcore.app.runtime.linux-x64.8.0.0.nupkg.sha512",
+    "C:\\Users\\ManuEcheveste\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\8.0.0\\microsoft.netcore.app.host.linux-x64.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,17 @@
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\bin\Debug\netcoreapp2.1\linux-x64\libhostpolicy.so
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\bin\Debug\netcoreapp2.1\linux-x64\libhostfxr.so
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\bin\Debug\netcoreapp2.1\linux-x64\Absence-Notifier
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\bin\Debug\netcoreapp2.1\linux-x64\Absence-Notifier.deps.json
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\bin\Debug\netcoreapp2.1\linux-x64\Absence-Notifier.runtimeconfig.json
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\bin\Debug\netcoreapp2.1\linux-x64\Absence-Notifier.runtimeconfig.dev.json
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\bin\Debug\netcoreapp2.1\linux-x64\Absence-Notifier.dll
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\bin\Debug\netcoreapp2.1\linux-x64\Absence-Notifier.pdb
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\obj\Debug\netcoreapp2.1\linux-x64\Absence-Notifier.csproj.AssemblyReference.cache
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\obj\Debug\netcoreapp2.1\linux-x64\Absence-Notifier.GeneratedMSBuildEditorConfig.editorconfig
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\obj\Debug\netcoreapp2.1\linux-x64\Absence-Notifier.AssemblyInfoInputs.cache
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\obj\Debug\netcoreapp2.1\linux-x64\Absence-Notifier.AssemblyInfo.cs
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\obj\Debug\netcoreapp2.1\linux-x64\Absence-Notifier.csproj.CoreCompileInputs.cache
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\obj\Debug\netcoreapp2.1\linux-x64\Absence-Notifier.sourcelink.json
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\obj\Debug\netcoreapp2.1\linux-x64\Absence-Notifier.dll
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\obj\Debug\netcoreapp2.1\linux-x64\Absence-Notifier.pdb
+D:\ManuEcheveste\Projects\Absence-Notifier\Absence-Notifier\obj\Debug\netcoreapp2.1\linux-x64\Absence-Notifier.genruntimeconfig.cache

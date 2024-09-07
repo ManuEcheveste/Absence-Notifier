@@ -48,9 +48,11 @@ public class EmailHandler
         mail.Body = message;
         mail.IsBodyHtml = true;
 
-        var smtpClient = new SmtpClient("smtp.gmail.com")
+        //var smtpClient = new SmtpClient("smtp.gmail.com")
+        var smtpClient = new SmtpClient(emailServerAddress)
         {
-            Port = 587,
+            //Port = 587,
+            Port = emailPort,
             Credentials = new NetworkCredential(personalEmail, emailPassword),
             EnableSsl = true,
         };

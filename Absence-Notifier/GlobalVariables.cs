@@ -49,6 +49,8 @@ namespace GlobalVariables
 
         public static string configFile = Path.Combine(emailDir, "config.cfg"); //Para las fechas
 
+        public static string emailServerSettings = Path.Combine(emailDir, "server.cfg"); //Server config (port)
+
         #endregion
 
         #region Email Settings
@@ -63,6 +65,12 @@ namespace GlobalVariables
 
         public static string contactsMessage;
         public static string specialContactsMessage;
+
+        #endregion
+
+        #region Email Server
+        public static int emailPort;
+        public static string emailServerAddress;
 
         #endregion
 
@@ -113,6 +121,18 @@ namespace GlobalVariables
 
         public static void LoginEmail()
         {
+            string[] serverConfig = File.ReadAllLines(emailServerSettings);
+            foreach(string line in serverConfig)
+            {
+                if (line.StartsWith("address="))
+                {
+                    emailServerAddress = line.Substring("address=".Length);
+                }
+                else if (line.StartsWith("port="))
+                {
+                    emailPort = int.Parse(line.Substring("port=".Length));
+                }
+            }
             string[] accountConfig = File.ReadAllLines(emailAccount);
             foreach(string line in accountConfig)
             {
